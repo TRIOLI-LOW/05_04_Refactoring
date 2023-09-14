@@ -1,17 +1,18 @@
+
 #pragma once
 #include "shape.h"
 
-class Transform
+    class Transform
 {
 public:
-    Transform(const Shape& sh);
+    Transform(Shape* sh);
 
-    Shape shift(int m, int n, int k);
-    Shape scaleX(int a);
-    Shape scaleY(int d);
-    Shape scaleZ(int e);
-    Shape scale(int s);
+    void shift(int m, int n, int k);
+    void scaleX(int a);
+    void scaleY(int d);
+    void scaleZ(int e);
+    void scale(int s);
 
 private:
-    Shape shape;
+    Shape* shape;
 };
